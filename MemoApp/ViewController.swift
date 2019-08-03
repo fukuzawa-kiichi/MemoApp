@@ -24,8 +24,15 @@ class ViewController: UIViewController, UITextViewDelegate {
         MemoTextView.text = appDelegate.lastText
     }
 
-
-    func textViewDidChange(_ textView: UITextView) {
+    // 削除ボタン
+    @IBAction func deleteButton(_ sender: Any) {
+        MemoTextView.text = ""
+        
+        saveText()
+    }
+    
+    // MemoTextViewになにか入力されたとき動作する
+    func textViewDidChange(_ MemoTextView: UITextView) {
         // AppDelegateを呼び出して変数に格納する
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
@@ -33,5 +40,13 @@ class ViewController: UIViewController, UITextViewDelegate {
         appDelegate.lastText = MemoTextView.text
     }
     
+    // 端末似データを保存する
+    func saveText(){
+        // AppDelegateを呼び出して変数に格納する
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        // MemoTextViewに書かれた内容をAppDelegateのlastTextにか更新していく
+        appDelegate.lastText = MemoTextView.text
+    }
 }
 
