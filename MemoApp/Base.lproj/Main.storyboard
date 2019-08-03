@@ -19,18 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cfZ-Gg-aqz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzF-Xm-NeO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="削除"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8zb-kD-FaL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="dzF-Xm-NeO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BDb-f9-qnF"/>
+                            <constraint firstItem="dzF-Xm-NeO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M47-5l-Rpo"/>
                             <constraint firstItem="cfZ-Gg-aqz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UHI-zK-p3X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cfZ-Gg-aqz" secondAttribute="bottom" id="Vsw-yc-o6A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cfZ-Gg-aqz" secondAttribute="trailing" id="aXg-Sz-UW9"/>
-                            <constraint firstItem="cfZ-Gg-aqz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sEh-JZ-DwZ"/>
+                            <constraint firstItem="cfZ-Gg-aqz" firstAttribute="top" secondItem="dzF-Xm-NeO" secondAttribute="bottom" id="aki-r3-e45"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dzF-Xm-NeO" secondAttribute="trailing" id="y4z-Ay-ps8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
         </scene>
     </scenes>
 </document>
